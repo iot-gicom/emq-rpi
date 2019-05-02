@@ -123,8 +123,8 @@ RUN git clone https://github.com/emqtt/emq-relx.git /emqttd && \
     rm -rf /tmp/erlang-build
 
 # remove some unused build deps to reduce the package size
-RUN apk add remove -qq --purge -y $BUILD_PACKAGES \
-    && rm -rf /var/lib/apt/lists/* \
+#RUN apk add remove -qq --purge -y $BUILD_PACKAGES \
+RUN rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/local/lib/erlang
 
 
